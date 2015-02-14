@@ -1,0 +1,106 @@
+@import "partials/settings";
+@import "partials/foundation";
+
+
+$teal-color: #88C2C0;
+$white-color: #FFFFFF;
+$dark-color: #262626;
+$gray-color: #535353;  
+
+body {
+  background-color: $teal-color;
+} 
+
+header{
+  background-color: $dark-color;
+}
+nav.top-bar ul{
+  background-color: $dark-color;
+}
+
+nav.top-bar h1{
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+}
+
+.top-bar h1.mobile_logo a {
+  color: $teal-color;
+  font-weight: 200;
+}
+
+h1.mobile_logo a{
+  margin-left: 40px;
+  color: $teal-color;
+}
+
+h1.mobile_logo span{
+  font-weight: 600;
+  color: $teal-color;
+}
+
+.toggle-topbar{
+  background-image: url(../images/menu_icon.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
+}
+
+.hero_wrapper{
+  background-image: url(../images/ship.png);
+  background-repeat: no-repeat;
+  background-size: 250px 250px;
+  background-position: 50% -10%;
+}
+
+.hero_text span{
+  font-weight: bold;
+}
+
+.hero_text p{
+  margin-top: 183px;
+  padding: 5px;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.hero_action{
+  text-align: center;
+  padding: 15px;
+  background-color: #535353;
+  border-bottom: 5px solid #262626;
+  margin-bottom: 20px;
+}
+
+.hero_button{
+  color: $white-color;
+}
+
+
+
+.highlights {
+   background-color: $white-color;
+}
+
+.
+
+.more_deals_container {
+  background-color: yellow;
+  padding: 10px;
+}
+
+footer {
+  background-color: #262626;
+  color: white;
+  text-align: center;
+}
+
+.highlights h2,h3{
+  background-color: #535353;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+
