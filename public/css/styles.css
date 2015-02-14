@@ -3064,18 +3064,66 @@ h1.mobile_logo span {
   color: #FFFFFF; }
 
 .highlights {
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  padding: 20px; }
+
+.highlights h2, h3 {
+  color: #FFFFFF; }
+
+.highlight {
+  background-color: #535353;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 10px; }
+
+.highlight h2 {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px;
+  margin-top: 20px;
+  border-bottom: 1px solid #434343; }
+
+.overline {
+  border-top: 1px solid #636363; }
+
+.highlight h3 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: 300;
+  border-bottom: 5px solid #FFFFFF;
+  display: inline; }
+
+.highlight p {
+  margin-bottom: 0;
+  background-color: #535353;
+  color: #FFFFFF;
+  padding: 25px;
+  font-size: 16px;
+  font-weight: 100;
+  border-radius: 10px; }
 
 .more_deals_container {
-  background-color: yellow;
-  padding: 10px; }
+  background-color: #88C2C0;
+  text-align: center;
+  padding: 20px;
+  background-image: url(../images/arrow.png);
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  background-position: 70%; }
+
+.more_deals_container .more_deals_mobile {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 800; }
 
 footer {
   background-color: #262626;
-  color: white;
-  text-align: center; }
-
-.highlights h2, h3 {
-  background-color: #535353;
+  color: #535353;
   text-align: center;
-  color: #FFFFFF; }
+  padding: 10px; }
+
+footer p {
+  font-size: 12px;
+  padding: 15px; }
