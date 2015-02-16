@@ -4,40 +4,79 @@
 
 $teal-color: #88C2C0;
 $white-color: #FFFFFF;
-$dark-color: #262626;
+$black-color: #262626;
 $gray-color: #535353;  
 
 body {
   background-color: $teal-color;
-} 
+}  
 
 header{
-  background-color: $dark-color;
-}
-nav.top-bar ul{
-  background-color: $dark-color;
+  background-color: $black-color;
+
+  @media #{$medium-up}{
+    background-color: $teal-color;
+    background-image: url(../images/header_bg.png);
+    padding: 20px;
+
+  }  
+} 
+
+.hero{
+  padding-bottom: 20px; 
 }
 
-nav.top-bar h1{
-  background-image: url(../images/logo.svg);
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
+nav.top-bar{
+
+  ul{
+    background-color: $black-color;
+  }
+
+  h1{
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+  }
 }
 
-.top-bar h1.mobile_logo a {
+.top-bar-section .right a{
+  background-color: $black-color;
   color: $teal-color;
-  font-weight: 200;
+  border-top: 1px solid $teal-color;
+  border-bottom: 1px solid $teal-color;
+
 }
 
-h1.mobile_logo a{
-  margin-left: 40px;
-  color: $teal-color;
+
+h1.mobile_logo{
+
+  a {
+    color: $teal-color;
+    font-weight: 200;
+    margin-left: 40px;
+  }
+
+  span{
+    font-weight: 600;
+    color: $teal-color;
+  }
 }
 
-h1.mobile_logo span{
-  font-weight: 600;
-  color: $teal-color;
+.desktop_logo{ 
+  text-align: center;
+
+  a{
+    color: $black-color;
+    font-size: 18px;
+
+  }
+
+  span{
+    font-weight: 700;
+    color: $black-color;
+  }
 }
+ 
 
 .toggle-topbar{
   background-image: url(../images/menu_icon.png);
@@ -48,6 +87,7 @@ h1.mobile_logo span{
   margin-top: 10px;
 }
 
+
 .hero_wrapper{
   background-image: url(../images/ship.png);
   background-repeat: no-repeat;
@@ -55,23 +95,38 @@ h1.mobile_logo span{
   background-position: 50% -10%;
 }
 
-.hero_text span{
-  font-weight: bold;
-}
+.hero_text{
 
-.hero_text p{
-  margin-top: 183px;
-  padding: 5px;
-  font-weight: 300;
-  font-size: 18px;
-}
+  span{
+    font-weight: bold;
+  }
 
+  p{
+    margin-top: 183px;
+    padding: 5px;
+    font-weight: 300;
+    font-size: 18px;
+  }
+}
+    
 .hero_action{
   text-align: center;
   padding: 15px;
-  background-color: #535353;
-  border-bottom: 5px solid #262626;
+  background-color: $gray-color;
+  border-bottom: 5px solid $black-color;
   margin-bottom: 20px;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-delay: .5s;
+
+  a{
+    color: $white-color; 
+  }
+}
+
+.hero_action:hover{
+  background-color: $black-color;
+
 }
 
 .hero_button{
@@ -81,83 +136,93 @@ h1.mobile_logo span{
 
 .highlights{
    background-color: $white-color;
-   padding: 20px;
+   padding-top: 20px; 
+   padding-bottom: 40px;
 
+   h2,h3{
+   color: $white-color;
+ }
 }
-
-.highlights h2,h3{
-  color: $white-color;
-} 
-
 
 .highlight{
   background-color: $gray-color;
   text-align: center;
   border-radius: 5px;
   margin-top: 10px;
-}
-  
-.highlight h2{
+  color: $white-color;
+
+
+  h2{
     margin-bottom: 0;
     font-size: 18px;
     font-weight: bold;
     padding: 20px;
     margin-top: 20px;
     border-bottom: 1px solid #434343;
-    
-}
-.overline{
-  border-top: 1px solid #636363;
-}  
-.highlight h3{
+  }
+
+  h3{
     margin-top: 10px;
     margin-bottom: 0;
     font-size: 60px;
     font-weight: 300;
-    border-bottom: 5px solid $white-color;
     display: inline;
-}
-
-.highlight p{
+    border-bottom: 5px solid $white-color;
+    
+  }
+  
+  p{
+    margin-top: 15px;
     margin-bottom: 0;
-    background-color: $gray-color;
-    color: $white-color;
     padding: 25px;
     font-size: 16px;
     font-weight: 100;
-    border-radius: 10px;
   }
-  
+}
 
+.to_the_moon{
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-delay: .5s;
+}
+
+.to_the_moon:hover{
+  background-color: $black-color;
+}
+
+.overline{
+  border-top: 1px solid #636363;
+}  
+ 
 .more_deals_container {
   background-color: $teal-color;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   background-image: url(../images/arrow.png);
   background-repeat: no-repeat;
   background-size: 40px 40px;
-  background-position: 70%
+  background-position: 70%;
+  margin-top: 5px;
 
-}
-
-.more_deals_container .more_deals_mobile{
-  color: $white-color;
-  font-size: 18px;
-  font-weight: 800;
+  .more_deals_mobile{
+    color: $white-color;
+    font-size: 18px;
+    font-weight: 800;
+  }
 }
 
 footer {
-  background-color: $dark-color;
+  background-color: $black-color;
   color: $gray-color;
   text-align: center;
   padding: 10px;
 
+  p{
+    font-size: 12px;
+    padding: 15px;
+  }
 }
 
-footer p{
-  font-size: 12px;
-  padding: 15px;
-}
 
 
 
