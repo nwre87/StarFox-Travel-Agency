@@ -3018,18 +3018,19 @@ header {
 .hero {
   padding-bottom: 20px; }
 
+@media only screen and (max-width: 40em) {
+  nav.desktop-nav {
+    display: none; } }
+
 nav.top-bar ul {
   background-color: #262626; }
 nav.top-bar h1 {
   background-image: url(../images/logo.svg);
   background-repeat: no-repeat;
   background-size: 50px 50px; }
-
-.top-bar-section .right a {
-  background-color: #262626;
-  color: #88C2C0;
-  border-top: 1px solid #88C2C0;
-  border-bottom: 1px solid #88C2C0; }
+@media only screen and (min-width:40.063em) {
+  nav.top-bar {
+    border-radius: 5px; } }
 
 h1.mobile_logo a {
   color: #88C2C0;
@@ -3056,6 +3057,13 @@ h1.mobile_logo span {
   height: 25px;
   margin-top: 10px; }
 
+.top-bar-section .right li a {
+  color: #88C2C0;
+  border-top: 1px solid #88C2C0; }
+  @media only screen and (min-width:40.063em) {
+    .top-bar-section .right li a {
+      display: none; } }
+
 .hero_wrapper {
   background-image: url(../images/ship.png);
   background-repeat: no-repeat;
@@ -3081,6 +3089,10 @@ h1.mobile_logo span {
   transition-delay: .5s; }
   .hero_action a {
     color: #FFFFFF; }
+  @media only screen and (min-width:40.063em) {
+    .hero_action {
+      width: 240px;
+      margin: auto; } }
 
 .hero_action:hover {
   background-color: #262626; }
