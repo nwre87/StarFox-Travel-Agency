@@ -6,6 +6,18 @@ $white-color: #FFFFFF;
 $black-color: #262626;
 $gray-color: #535353;  
 
+.columns{
+  @media #{$small-only}{
+    padding-left: 3.4rem;
+    padding-right: 3.4rem;
+  }
+
+  @media #{$medium-only}{
+    padding-left: 3.4rem;
+    padding-right: 3.4rem;
+  }
+}
+
 body {
   background-color: $teal-color;
 
@@ -76,12 +88,13 @@ nav.top-bar{
   }
 
   .name{
+    
     h1{
       background-image: url(../images/logo.svg);
       background-repeat: no-repeat;
       background-size: 50px 50px;
 
-      a {
+      a{
         color: $teal-color;
         font-weight: 300;
         margin-left: 40px;
@@ -92,13 +105,12 @@ nav.top-bar{
         }
       }
     }
-  }
+  } 
   
   @media #{$medium-up}{
     display: none;
   }
 }
-
 .top_logo{
   @media #{$medium-up}{
     background-image: url(../images/logo.svg);
@@ -112,11 +124,6 @@ nav.top-bar{
     margin-top: 20px;
   }
 }
-
-/* h1.mobile_logo{
-
-  
-} */
 
 .desktop_logo{ 
   text-align: center;
@@ -156,10 +163,10 @@ nav.top-bar{
   background-color: $teal-color;
 
   @media #{$small-only}{
-  background-image: url(../images/ship.png);
-  background-repeat: no-repeat;
-  background-size: 250px 250px;
-  background-position: 50% -10%;
+    background-image: url(../images/ship.png);
+    background-repeat: no-repeat;
+    background-size: 250px 250px;
+    background-position: 50% -10%;
   }
 
   @media #{$medium-only}{
@@ -289,40 +296,51 @@ nav.top-bar{
     @media #{$medium-only}{
       float: left;
       width: 50%;
-      padding: 25px;
+      padding: 20px;
       border-right: 1px solid #636363;
     }
-}
 
   h2{
      @media #{$medium-only}{
       text-align: left;
     }
   }
-  .desc{
-    @media #{$medium-only}{
-      margin-left: -55px;
-      margin-top: -30px;
-    }
-  }
+}  
+  // .desc {
+  //   @media #{$medium-only}{
+  //     margin-left: -55px;
+  //     margin-top: -30px;
+  //  } 
+      
+  //     h2{
+  //       /* text-align: left; */
+  //     }
+
+  //     p{
+  //       /* text-align: left;
+  //       margin-left: 70px; */
+  //     }
+
+// } 
 
   .highlight_description{
     @media #{$medium-only}{
       float: right;
       width: 50%;
       text-align: left;
-      
+ 
       p{
-        padding: 5px 0;
-        width: 230px;
+        text-align: left;
+        padding: 0 20px 20px 20px;
         margin: auto;
         line-height: 1.2;
       }
       h2{
-        padding: 18px 30px 25px;
+        text-align: left; 
+        
       }
-    }
-  }
+    } 
+  } 
 
   h2{
     margin-bottom: 0;
@@ -351,7 +369,7 @@ nav.top-bar{
     margin-bottom: 0;
     padding: 25px;
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 100; 
   }
 
         
@@ -370,10 +388,20 @@ nav.top-bar{
   border-top: 1px solid #636363;
 
   @media #{$medium-only}{
-    border-bottom: none;
+    border-top: none;
   }
 }  
- 
+
+.just_around_earth{
+  @media #{$small-only}{
+  margin-top: 50px;
+  } 
+
+  @media #{$medium-only}{
+    margin-top: 50px;
+  } 
+}
+
 .just_to_jupiter{
     height: 110px;
     padding: 25px;
@@ -412,7 +440,7 @@ nav.top-bar{
 .dealie{
   background-color: $teal-color;
   text-align: center;
-  padding: 20px;
+  padding: 20px; 
   
 /*   background-size: 40px; */
 
@@ -420,26 +448,11 @@ nav.top-bar{
     color: $white-color;
     font-size: 24px;
     background-image: url(../images/arrow.png);
-  background-repeat: no-repeat;
-  padding: 5px 60px;
-  background-position: right 50%;
-
+    background-repeat: no-repeat;
+    padding: 5px 60px;
+    background-position: right 50%;
   }
- } 
-  /* text-align: center;
-  padding: 20px; */
-  /* margin-top: 35px;   */
-  /* 
-  background-size: 35px;
-  background-position: 70%;
-  
-  a{
-    color: $white-color;
-    font-size: 26px;
-  } */
-/* } */ 
-
-
+} 
 .more_dets{
   @media #{$large-up}{
   padding: 13px;
@@ -475,8 +488,7 @@ footer {
     font-size: 12px;
     padding: 15px;
   }
-}
-
+ } 
 
 
 
