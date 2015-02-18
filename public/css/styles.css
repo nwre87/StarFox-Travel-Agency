@@ -3,18 +3,18 @@ meta.foundation-version {
 
 meta.foundation-mq-small {
   font-family: "/only screen/";
-  width: 0; }
+  width: 0em; }
 
 meta.foundation-mq-small-only {
-  font-family: "/only screen and (max-width: 40em)/";
-  width: 0; }
+  font-family: "/only screen and (max-width: 40.063em)/";
+  width: 0em; }
 
 meta.foundation-mq-medium {
   font-family: "/only screen and (min-width:40.063em)/";
   width: 40.063em; }
 
 meta.foundation-mq-medium-only {
-  font-family: "/only screen and (min-width:40.063em) and (max-width:64em)/";
+  font-family: "/only screen and (min-width:40.063em) and (max-width:64.063em)/";
   width: 40.063em; }
 
 meta.foundation-mq-large {
@@ -1902,7 +1902,7 @@ meta.foundation-mq-topbar {
     padding-bottom: .4125rem;
     margin-bottom: 0;
     font-size: 0.75rem; }
-    @media only screen and (max-width: 40em) {
+    @media only screen and (max-width: 40.063em) {
       .top-bar .button, .top-bar button {
         position: relative;
         top: -1px; } }
@@ -2348,7 +2348,7 @@ meta.foundation-mq-topbar {
 .text-justify {
   text-align: justify !important; }
 
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 40.063em) {
   .small-only-text-left {
     text-align: left !important; }
   .small-only-text-right {
@@ -2368,7 +2368,7 @@ meta.foundation-mq-topbar {
   .small-text-justify {
     text-align: justify !important; } }
 
-@media only screen and (min-width:40.063em) and (max-width:64em) {
+@media only screen and (min-width:40.063em) and (max-width:64.063em) {
   .medium-only-text-left {
     text-align: left !important; }
   .medium-only-text-right {
@@ -3006,42 +3006,83 @@ th.hide-for-touch {
 
 body {
   background-color: #88C2C0; }
+  @media only screen and (min-width:40.063em) {
+    body {
+      background-color: #FFFFFF; } }
 
 header {
   background-color: #262626; }
+  @media only screen and (max-width: 40.063em) {
+    header {
+      margin-top: 5px; } }
   @media only screen and (min-width:40.063em) {
     header {
       background-color: #88C2C0;
       background-image: url(../images/header_bg.png);
-      padding: 20px; } }
+      height: 150px; } }
+
+a {
+  color: #88C2C0; }
 
 .hero {
   padding-bottom: 20px; }
 
-@media only screen and (max-width: 40em) {
-  nav.desktop-nav {
-    display: none; } }
+.desktop-nav {
+  padding: 0px; }
+  .desktop-nav ul {
+    list-style-type: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    word-spacing: 30px;
+    border: 1px solid #262626;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #262626;
+    margin: auto; }
+  .desktop-nav a span {
+    word-spacing: 0; }
+  .desktop-nav li {
+    display: inline; }
+  .desktop-nav a:hover {
+    color: #FFFFFF; }
+  @media only screen and (max-width: 40.063em) {
+    .desktop-nav {
+      display: none; } }
 
 nav.top-bar ul {
   background-color: #262626; }
-nav.top-bar h1 {
+nav.top-bar .name h1 {
   background-image: url(../images/logo.svg);
   background-repeat: no-repeat;
   background-size: 50px 50px; }
+  nav.top-bar .name h1 a {
+    color: #88C2C0;
+    font-weight: 300;
+    margin-left: 40px; }
+    nav.top-bar .name h1 a span {
+      font-weight: 600;
+      color: #88C2C0; }
 @media only screen and (min-width:40.063em) {
   nav.top-bar {
-    border-radius: 5px; } }
+    display: none; } }
 
-h1.mobile_logo a {
-  color: #88C2C0;
-  font-weight: 200;
-  margin-left: 40px; }
-h1.mobile_logo span {
-  font-weight: 600;
-  color: #88C2C0; }
+@media only screen and (min-width:40.063em) {
+  .top_logo {
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-position: 50% -5%; } }
 
+.desktop_logo h1 {
+  margin-top: 20px; }
+
+/* h1.mobile_logo{
+
+  
+} */
 .desktop_logo {
-  text-align: center; }
+  text-align: center;
+  margin-top: 50px; }
   .desktop_logo a {
     color: #262626;
     font-size: 18px; }
@@ -3052,7 +3093,7 @@ h1.mobile_logo span {
 .toggle-topbar {
   background-image: url(../images/menu_icon.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 24px;
   width: 25px;
   height: 25px;
   margin-top: 10px; }
@@ -3065,18 +3106,65 @@ h1.mobile_logo span {
       display: none; } }
 
 .hero_wrapper {
-  background-image: url(../images/ship.png);
-  background-repeat: no-repeat;
-  background-size: 250px 250px;
-  background-position: 50% -10%; }
+  background-color: #88C2C0; }
+  @media only screen and (max-width: 40.063em) {
+    .hero_wrapper {
+      background-image: url(../images/ship.png);
+      background-repeat: no-repeat;
+      background-size: 250px 250px;
+      background-position: 50% -10%; } }
+  @media only screen and (min-width:40.063em) and (max-width:64.063em) {
+    .hero_wrapper {
+      margin-top: 50px;
+      border-radius: 5px; } }
+  @media only screen and (min-width:64.063em) {
+    .hero_wrapper {
+      margin-top: 50px;
+      border-radius: 5px; } }
 
 .hero_text span {
   font-weight: bold; }
 .hero_text p {
-  margin-top: 183px;
   padding: 5px;
   font-weight: 300;
-  font-size: 18px; }
+  font-size: 18px;
+  text-align: center; }
+  @media only screen and (max-width: 40.063em) {
+    .hero_text p {
+      margin-top: 183px; } }
+
+@media only screen and (min-width:64.063em) {
+  .hero_text p {
+    float: left;
+    width: 60%;
+    text-align: left;
+    font-size: 25px;
+    padding: 37px; } }
+
+@media only screen and (min-width:64.063em) {
+  .fom {
+    float: right;
+    width: 40%; } }
+
+@media only screen and (min-width:40.063em) and (max-width:64.063em) {
+  .ship {
+    background-image: url(../images/ship.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 203px;
+    width: 277px;
+    margin: auto;
+    margin-top: -63px; } }
+
+@media only screen and (min-width:64.063em) {
+  .lgship {
+    background-image: url(../images/ship.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 203px;
+    width: 277px;
+    margin-top: -67px;
+    margin-left: 66px; } }
 
 .hero_action {
   text-align: center;
@@ -3092,7 +3180,11 @@ h1.mobile_logo span {
   @media only screen and (min-width:40.063em) {
     .hero_action {
       width: 240px;
-      margin: auto; } }
+      margin: auto;
+      margin-bottom: 30px; } }
+  @media only screen and (min-width:64.063em) {
+    .hero_action {
+      margin-top: 30px; } }
 
 .hero_action:hover {
   background-color: #262626; }
@@ -3113,26 +3205,61 @@ h1.mobile_logo span {
   border-radius: 5px;
   margin-top: 10px;
   color: #FFFFFF; }
-  .highlight h2 {
-    margin-bottom: 0;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 20px;
-    margin-top: 20px;
-    border-bottom: 1px solid #434343; }
-  .highlight h3 {
-    margin-top: 10px;
-    margin-bottom: 0;
-    font-size: 60px;
-    font-weight: 300;
-    display: inline;
-    border-bottom: 5px solid #FFFFFF; }
-  .highlight p {
-    margin-top: 15px;
-    margin-bottom: 0;
+
+@media only screen and (min-width:40.063em) and (max-width:64.063em) {
+  .cost {
+    float: left;
+    width: 50%;
     padding: 25px;
-    font-size: 16px;
-    font-weight: 100; }
+    border-right: 1px solid #636363; } }
+
+@media only screen and (min-width:40.063em) and (max-width:64.063em) {
+  h2 {
+    text-align: left; } }
+
+@media only screen and (min-width:40.063em) and (max-width:64.063em) {
+  .desc {
+    margin-left: -55px;
+    margin-top: -30px; } }
+
+@media only screen and (min-width:40.063em) and (max-width:64.063em) {
+  .highlight_description {
+    float: right;
+    width: 50%;
+    text-align: left; }
+    .highlight_description p {
+      padding: 5px 0;
+      width: 230px;
+      margin: auto;
+      line-height: 1.2; }
+    .highlight_description h2 {
+      padding: 18px 30px 25px; } }
+
+h2 {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 20px;
+  margin-top: 20px;
+  border-bottom: 1px solid #434343; }
+  @media only screen and (min-width:40.063em) and (max-width:64.063em) {
+    h2 {
+      border: none; } }
+
+h3 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: 300;
+  display: inline;
+  border-bottom: 5px solid #FFFFFF; }
+
+p {
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding: 25px;
+  font-size: 16px;
+  font-weight: 100; }
 
 .to_the_moon {
   transition-property: background-color;
@@ -3144,20 +3271,83 @@ h1.mobile_logo span {
 
 .overline {
   border-top: 1px solid #636363; }
+  @media only screen and (min-width:40.063em) and (max-width:64.063em) {
+    .overline {
+      border-bottom: none; } }
 
-.more_deals_container {
+.just_to_jupiter {
+  height: 110px;
+  padding: 25px;
+  border-bottom: 1px solid #636363; }
+
+h4 {
+  color: #FFFFFF;
+  font-size: 14px; }
+
+h5 {
+  color: #FFFFFF;
+  font-size: 38px;
+  font-weight: 100;
+  line-height: 20px; }
+
+.center_of_the_earth {
+  height: 110px;
+  padding: 25px;
+  border-bottom: 1px solid #636363; }
+  .center_of_the_earth h4 {
+    color: #FFFFFF;
+    font-size: 14px; }
+  .center_of_the_earth h5 {
+    color: #FFFFFF;
+    font-size: 38px;
+    font-weight: 100;
+    line-height: 20px; }
+
+.dealie {
   background-color: #88C2C0;
   text-align: center;
-  padding: 15px;
-  background-image: url(../images/arrow.png);
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  background-position: 70%;
-  margin-top: 5px; }
-  .more_deals_container .more_deals_mobile {
+  padding: 20px;
+  /*   background-size: 40px; */ }
+  .dealie a {
     color: #FFFFFF;
-    font-size: 18px;
-    font-weight: 800; }
+    font-size: 24px;
+    background-image: url(../images/arrow.png);
+    background-repeat: no-repeat;
+    padding: 5px 60px;
+    background-position: right 50%; }
+
+/* text-align: center;
+  padding: 20px; */
+/* margin-top: 35px;   */
+/* 
+  background-size: 35px;
+  background-position: 70%;
+  
+  a{
+    color: $white-color;
+    font-size: 26px;
+  } */
+/* } */
+@media only screen and (min-width:64.063em) {
+  .more_dets {
+    padding: 13px;
+    background-image: url(../images/arrow.png);
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 81%;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-delay: .5s;
+    padding-top: 16px;
+    padding-bottom: 16px; } }
+
+.more_dets:hover {
+  background-color: #262626; }
+
+.more_deals_desktop {
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: 300; }
 
 footer {
   background-color: #262626;

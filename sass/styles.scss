@@ -1,7 +1,6 @@
 @import "partials/settings";
 @import "partials/foundation";
 
-
 $teal-color: #88C2C0;
 $white-color: #FFFFFF;
 $black-color: #262626;
@@ -9,23 +8,62 @@ $gray-color: #535353;
 
 body {
   background-color: $teal-color;
+
+  @media #{$medium-up}{
+   background-color: $white-color;
+  }
 }  
 
 header{
   background-color: $black-color;
 
+  @media #{$small-only}{
+    margin-top: 5px;
+  }
+
   @media #{$medium-up}{
     background-color: $teal-color;
     background-image: url(../images/header_bg.png);
-    padding: 20px;
+    height: 150px;
   }  
 } 
+
+a{
+  color: $teal-color;
+}
 
 .hero{
   padding-bottom: 20px; 
 }
 
-nav.desktop-nav{
+.desktop-nav{
+  padding: 0px;
+ 
+  ul{
+    list-style-type: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    word-spacing: 30px;
+    border: 1px solid $black-color;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: $black-color;
+    margin: auto;
+  }
+
+  a span{
+    word-spacing: 0;
+  }  
+
+  li{
+    display: inline;
+  }
+
+  a:hover{
+    color: $white-color; 
+  }
+
     @media #{$small-only}{
       display: none;
     }
@@ -35,38 +73,54 @@ nav.top-bar{
 
   ul{
     background-color: $black-color;
-
   }
 
-  h1{
-    background-image: url(../images/logo.svg);
-    background-repeat: no-repeat;
-    background-size: 50px 50px;
+  .name{
+    h1{
+      background-image: url(../images/logo.svg);
+      background-repeat: no-repeat;
+      background-size: 50px 50px;
+
+      a {
+        color: $teal-color;
+        font-weight: 300;
+        margin-left: 40px;
+
+        span{
+          font-weight: 600;
+          color: $teal-color;
+        }
+      }
+    }
   }
   
   @media #{$medium-up}{
-    border-radius: 5px;
-
+    display: none;
   }
 }
 
-
-h1.mobile_logo{
-
-  a {
-    color: $teal-color;
-    font-weight: 200;
-    margin-left: 40px;
-  }
-
-  span{
-    font-weight: 600;
-    color: $teal-color;
+.top_logo{
+  @media #{$medium-up}{
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-position: 50% -5%;
   }
 }
+
+.desktop_logo{
+  h1{
+    margin-top: 20px;
+  }
+}
+
+/* h1.mobile_logo{
+
+  
+} */
 
 .desktop_logo{ 
   text-align: center;
+  margin-top: 50px;
 
   a{
     color: $black-color;
@@ -79,11 +133,10 @@ h1.mobile_logo{
   }
 }
  
-
  .toggle-topbar{
   background-image: url(../images/menu_icon.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 24px;
   width: 25px;
   height: 25px;
   margin-top: 10px;
@@ -98,28 +151,89 @@ h1.mobile_logo{
   }  
 }
 
+.hero_wrapper {
 
-.hero_wrapper{
+  background-color: $teal-color;
+
+  @media #{$small-only}{
   background-image: url(../images/ship.png);
   background-repeat: no-repeat;
   background-size: 250px 250px;
   background-position: 50% -10%;
-}
+  }
+
+  @media #{$medium-only}{
+    margin-top: 50px;
+    border-radius: 5px;
+  }
+
+  @media #{$large-up}{
+    margin-top: 50px;
+    border-radius: 5px;
+  }
+ }   
 
 .hero_text{
-
-  span{
+  
+  span {
     font-weight: bold;
   }
 
   p{
+   @media #{$small-only} {
     margin-top: 183px;
+  }
     padding: 5px;
     font-weight: 300;
     font-size: 18px;
+    text-align: center;
   }
 }
-    
+
+.hero_text{
+
+  p{
+   @media #{$large-up}{
+    float: left;
+    width: 60%;
+    text-align: left;
+    font-size: 25px;
+    padding: 37px;
+   } 
+  }
+}
+
+.fom{
+  @media #{$large-up}{
+    float: right;
+    width: 40%;
+  }
+}    
+
+.ship{
+  @media #{$medium-only}{
+    background-image: url(../images/ship.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 203px;
+    width: 277px;
+    margin: auto;
+    margin-top: -63px;
+  }
+}    
+
+.lgship{
+  @media #{$large-up}{
+    background-image: url(../images/ship.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 203px;
+    width: 277px;
+    margin-top: -67px;
+    margin-left: 66px;
+  }
+}
+
 .hero_action{
   text-align: center;
   padding: 15px;
@@ -137,20 +251,21 @@ h1.mobile_logo{
   @media #{$medium-up}{
     width: 240px;
     margin: auto;
-
+    margin-bottom: 30px;
   }
 
+  @media #{$large-up}{
+    margin-top: 30px;
+  }
 }
 
 .hero_action:hover{
   background-color: $black-color;
-
 }
 
 .hero_button{
   color: $white-color;
 }
-
 
 .highlights{
    background-color: $white-color;
@@ -168,7 +283,46 @@ h1.mobile_logo{
   border-radius: 5px;
   margin-top: 10px;
   color: $white-color;
+}
 
+.cost{
+    @media #{$medium-only}{
+      float: left;
+      width: 50%;
+      padding: 25px;
+      border-right: 1px solid #636363;
+    }
+}
+
+  h2{
+     @media #{$medium-only}{
+      text-align: left;
+    }
+  }
+  .desc{
+    @media #{$medium-only}{
+      margin-left: -55px;
+      margin-top: -30px;
+    }
+  }
+
+  .highlight_description{
+    @media #{$medium-only}{
+      float: right;
+      width: 50%;
+      text-align: left;
+      
+      p{
+        padding: 5px 0;
+        width: 230px;
+        margin: auto;
+        line-height: 1.2;
+      }
+      h2{
+        padding: 18px 30px 25px;
+      }
+    }
+  }
 
   h2{
     margin-bottom: 0;
@@ -177,8 +331,12 @@ h1.mobile_logo{
     padding: 20px;
     margin-top: 20px;
     border-bottom: 1px solid #434343;
-  }
-
+  
+    @media #{$medium-only}{
+      border: none;
+   }
+}     
+   
   h3{
     margin-top: 10px;
     margin-bottom: 0;
@@ -186,7 +344,6 @@ h1.mobile_logo{
     font-weight: 300;
     display: inline;
     border-bottom: 5px solid $white-color;
-    
   }
   
   p{
@@ -196,8 +353,8 @@ h1.mobile_logo{
     font-size: 16px;
     font-weight: 100;
   }
-}
 
+        
 .to_the_moon{
   transition-property: background-color;
   transition-duration: 1s;
@@ -208,26 +365,105 @@ h1.mobile_logo{
   background-color: $black-color;
 }
 
+
 .overline{
   border-top: 1px solid #636363;
+
+  @media #{$medium-only}{
+    border-bottom: none;
+  }
 }  
  
-.more_deals_container {
+.just_to_jupiter{
+    height: 110px;
+    padding: 25px;
+    border-bottom: 1px solid #636363;
+  }
+ 
+  h4{
+  color: $white-color;
+  font-size: 14px;
+  }
+
+  h5{
+    color: $white-color;
+    font-size: 38px;
+    font-weight: 100;
+    line-height: 20px;
+  }
+  
+.center_of_the_earth{
+  height: 110px;
+  padding: 25px;
+  border-bottom: 1px solid #636363;
+
+  h4{
+    color: $white-color;
+    font-size: 14px;
+  }
+  h5{
+    color: $white-color;
+    font-size: 38px;
+    font-weight: 100;
+    line-height: 20px;
+  }  
+}
+
+.dealie{
   background-color: $teal-color;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
+  
+/*   background-size: 40px; */
+
+  a{
+    color: $white-color;
+    font-size: 24px;
+    background-image: url(../images/arrow.png);
+  background-repeat: no-repeat;
+  padding: 5px 60px;
+  background-position: right 50%;
+
+  }
+ } 
+  /* text-align: center;
+  padding: 20px; */
+  /* margin-top: 35px;   */
+  /* 
+  background-size: 35px;
+  background-position: 70%;
+  
+  a{
+    color: $white-color;
+    font-size: 26px;
+  } */
+/* } */ 
+
+
+.more_dets{
+  @media #{$large-up}{
+  padding: 13px;
   background-image: url(../images/arrow.png);
   background-repeat: no-repeat;
-  background-size: 40px 40px;
-  background-position: 70%;
-  margin-top: 5px;
-
-  .more_deals_mobile{
-    color: $white-color;
-    font-size: 18px;
-    font-weight: 800;
+  background-size: 30px 30px;
+  background-position: 81%;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-delay: .5s; 
+  padding-top: 16px;
+  padding-bottom: 16px;
   }
 }
+
+.more_dets:hover{
+  background-color: $black-color;
+} 
+
+.more_deals_desktop{
+    color: $white-color;
+    font-size: 22px;
+    font-weight: 300;
+}  
 
 footer {
   background-color: $black-color;
